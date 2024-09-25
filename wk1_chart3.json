@@ -9,7 +9,7 @@
       "color": "#000000",
       "subtitleColor": "#000000"
     },
-    "height": 250,
+    "height": 300,
     "width": 400,
     "autosize": {
       "type": "fit",
@@ -27,7 +27,7 @@
       }
     },
     "mark": {
-      "type": "line",
+      "type": "area",
       "color": "#f4134d",
       "strokeWidth": 2
     },
