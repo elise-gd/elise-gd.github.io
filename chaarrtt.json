@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Wage growth",
+    "text": "Wine Consumption",
     "anchor": "start",
-    "subtitle": "Yearly, change in salary index, % |Source: Destatis through ECO API",
+    "subtitle": "Population over 11 consuming wine, %  | Source: Istat through ECO-API",
     "fontSize": "14",
     "subtitleFontSize": "12",
     "color": "#000000",
@@ -15,7 +15,7 @@
   "background": "#ffffff",
   "view": {"fill": "#ffffff", "strokeOpacity": 0},
   "data": {
-    "url": "https://api.economicsobservatory.com/fra/wage?vega",
+    "url": "https://api.economicsobservatory.com/ita/wine?vega",
     "format": {"type": "json"}
   },
   "mark": {"type": "line", "color": "#f4134d", "strokeWidth": "2"},
@@ -32,3 +32,4 @@
     }
   }
 }
+
