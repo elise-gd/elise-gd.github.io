@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": " Average homeownership by age, for people born in 1950s",
+      "text": " Average homeownership by age, for people born in 1980s",
       "anchor": "start",
       "subtitle": "Bourquin et al, 2022",
       "fontSize": "14",
