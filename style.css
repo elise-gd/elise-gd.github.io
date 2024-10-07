@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 .top-banner {
-  background-color: #deedf894;
+  background-color: #faf2ea;
   color: rgb(0, 0, 0);
   padding: 30px;
   width: 100%;
@@ -27,22 +27,53 @@ body { /* We can style any HTML element by using its name - here we're styling t
   /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #886338;
+  color: #ccaea4;
   line-height: 1.6;
   /* we want a white page, that's centered and not too wide */
-  background-color: #ffffff;
+  background-color: #faf2ea;
   margin:0 auto;
-  max-width: 800px;
+  max-width: 1000px;
   padding-top: 60px;
 }
 
+.top-banner {
+  list-style-type: none;
+  margin: 12;
+  padding: 0;
+  background-color: #b39188;
+  overflow: hidden;
+  text-align: center;
+}
+
+.top-banner li {
+  display: inline;
+  padding: 14px 16px;
+}
+
+.top-banner li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.top-banner li a:hover {
+  background-color: #ddd;
+  color: #ccaea4;
+}
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #333;
+h1 {
+  color: #faf2ea;
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
+}
+
+h2, h3, h4, h5, h6 {
+  color : #392E2C;
+  margin-top : 24px;
+  margin-bottom : 16px ;
+  font-weight : 600;
 }
 
 /* We want the headings to be a little bigger than the paragraph text */
