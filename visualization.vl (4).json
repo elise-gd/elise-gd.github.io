@@ -35,10 +35,6 @@
         "grid": true,
         "tickColor": "#003366"
       },
-      "scale": {
-        "domain": [{"year": 2006}, null] 
-      }
-    },
     "y": {
       "field": "value",
       "type": "quantitative",
