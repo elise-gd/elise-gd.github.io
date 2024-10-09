@@ -3,32 +3,52 @@
   "title": {
     "text": "Wine Consumption",
     "anchor": "start",
-    "subtitle": "Population over 11 consuming wine, %  | Source: Istat through ECO-API",
+    "subtitle": "Population over 11 consuming wine, % | Source: Istat through ECO-API",
     "fontSize": 14,
     "subtitleFontSize": 12,
-    "color": "#000000",
-    "subtitleColor": "#000000"
+    "color": "#003366",
+    "subtitleColor": "#336699"
   },
-  "height": 250,
+  "height": 300, 
   "width": 400,
   "autosize": {"type": "fit", "contains": "padding"},
-  "background": "#ffffff",
-  "view": {"fill": "#ffffff", "strokeOpacity": 0},
+  "background": "#FFFFFF",
+  "view": {"fill": "#FFFFFF", "strokeOpacity": 0},
   "data": {
     "url": "https://api.economicsobservatory.com/ita/wine?vega",
     "format": {"type": "json"}
   },
-  "mark": {"type": "line", "color": "#f4134d", "strokeWidth": 2},
+  "mark": {
+    "type": "line",
+    "color": "#336699", 
+    "strokeWidth": 3 
+  },
   "encoding": {
     "x": {
       "field": "date",
       "type": "temporal",
-      "axis": {"title": "", "titleColor": "#122B39", "grid": false}
+      "axis": {
+        "title": "Date",
+        "titleColor": "#003366",
+        "labelColor": "#003366",
+        "gridColor": "#B3CDE3",
+        "grid": true,
+        "tickColor": "#003366"
+      }
     },
     "y": {
       "field": "value",
       "type": "quantitative",
-      "axis": {"title": "", "titleColor": "#122B39", "grid": false}
+      "axis": {
+        "title": "Wine Consumption (%)",
+        "titleColor": "#003366",
+        "labelColor": "#003366",
+        "gridColor": "#B3CDE3",
+        "grid": true,
+        "tickColor": "#003366"
+      },
+      "scale": {"domain": [0, 100]} 
     }
   }
 }
+
