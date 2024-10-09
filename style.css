@@ -93,6 +93,7 @@ h2 {
 p {
   margin-bottom: 1em;
   font-weight: 300;
+  color :rgb(0, 0, 0)
 }
 
 section {
@@ -114,4 +115,25 @@ a:hover {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.chart-container {
+  display: flex; 
+  justify-content: center;
+}
+
+.chart-with-text {
+  display: flex; 
+  align-items: flex-start; /* Align items to the top */
+  width: 50%; /* Make it full width */
+}
+
+.chart-with-text figure {
+  margin: 0; /* Remove margin for the figure */
+  width: 300px; /* Set a fixed width for the chart */
+}
+
+.chart-description {
+  margin-left: 20px; /* Space between the chart and the description */
+  flex-grow: 1; /* Allow the description to take remaining space */
 }
