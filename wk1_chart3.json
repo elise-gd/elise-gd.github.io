@@ -15,9 +15,9 @@
     "type": "fit",
     "contains": "padding"
   },
-  "background": "#E6F0FF", 
+  "background": "#FFFFFF", 
   "view": {
-    "fill": "#E6F0FF", 
+    "fill": "#FFFFFF", 
     "strokeOpacity": 0
   },
   "data": {
@@ -28,7 +28,7 @@
   },
   "mark": {
     "type": "area",
-    "color": "#6699CC", 
+    "color": "#E6F0FF", 
     "strokeWidth": 2,
     "stroke": "#336699" 
   },
@@ -59,3 +59,4 @@
     }
   }
 }
+
