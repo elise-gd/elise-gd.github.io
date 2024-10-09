@@ -15,9 +15,9 @@
     "type": "fit",
     "contains": "padding"
   },
-  "background": "#FFAE9D",
+  "background": "#ffad9da1",
   "view": {
-    "fill": "#FFAE9D",
+    "fill": "#ffad9da1",
     "strokeOpacity": 50
   },
   "data": {
