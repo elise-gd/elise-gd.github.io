@@ -36,6 +36,9 @@
         "tickColor": "#003366"
       }
     },
+      "scale": {
+        "domain": ["2006-01-01", null] 
+      }
     "y": {
       "field": "value",
       "type": "quantitative",
