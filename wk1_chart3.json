@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Wage growth",
+    "text": "Wage Growth",
     "anchor": "start",
-    "subtitle": "Yearly, change in salary index, % |Source: Destatis through ECO API",
+    "subtitle": "Yearly, change in salary index, % | Source: Destatis through ECO API",
     "fontSize": 14,
     "subtitleFontSize": 12,
-    "color": "#000000",
-    "subtitleColor": "#000000"
+    "color": "#003366",
+    "subtitleColor": "#336699"
   },
   "height": 300,
   "width": 400,
@@ -15,10 +15,10 @@
     "type": "fit",
     "contains": "padding"
   },
-  "background": "#ffad9da1",
+  "background": "#E6F0FF", 
   "view": {
-    "fill": "#ffffffa1",
-    "strokeOpacity": 50
+    "fill": "#E6F0FF", 
+    "strokeOpacity": 0
   },
   "data": {
     "url": "https://api.economicsobservatory.com/fra/wage?vega",
@@ -28,26 +28,33 @@
   },
   "mark": {
     "type": "area",
-    "color": "#B39188",
-    "strokeWidth": 2
+    "color": "#6699CC", 
+    "strokeWidth": 2,
+    "stroke": "#336699" 
   },
   "encoding": {
     "x": {
       "field": "date",
       "type": "temporal",
       "axis": {
-        "title": "",
-        "titleColor": "#122B39",
-        "grid": false
+        "title": "Date",
+        "titleColor": "#003366",
+        "labelColor": "#003366",
+        "gridColor": "#B3CDE3",
+        "grid": true,
+        "tickColor": "#003366"
       }
     },
     "y": {
       "field": "value",
       "type": "quantitative",
       "axis": {
-        "title": "",
-        "titleColor": "#122B39",
-        "grid": false
+        "title": "Wage Growth (%)",
+        "titleColor": "#003366",
+        "labelColor": "#003366",
+        "gridColor": "#B3CDE3",
+        "grid": true,
+        "tickColor": "#003366"
       }
     }
   }
