@@ -9,7 +9,7 @@
     "color": "#003366",
     "subtitleColor": "#336699"
   },
-  "height": 300, 
+  "height": 300,
   "width": 400,
   "autosize": {"type": "fit", "contains": "padding"},
   "background": "#FFFFFF",
@@ -20,8 +20,8 @@
   },
   "mark": {
     "type": "line",
-    "color": "#336699", 
-    "strokeWidth": 3 
+    "color": "#336699",
+    "strokeWidth": 3
   },
   "encoding": {
     "x": {
@@ -34,8 +34,7 @@
         "gridColor": "#B3CDE3",
         "grid": true,
         "tickColor": "#003366"
-      }
-    },
+      },
       "scale": {
         "domain": ["2006-01-01", null] 
       }
@@ -51,8 +50,7 @@
         "grid": true,
         "tickColor": "#003366"
       },
-      "scale": {"domain": [0, 100]} 
+      "scale": {"domain": [0, 100]}
     }
   }
 }
-
