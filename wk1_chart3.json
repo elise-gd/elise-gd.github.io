@@ -18,7 +18,7 @@
   "background": "#FFAE9D",
   "view": {
     "fill": "#FFAE9D",
-    "strokeOpacity": 0
+    "strokeOpacity": 50
   },
   "data": {
     "url": "https://api.economicsobservatory.com/fra/wage?vega",
