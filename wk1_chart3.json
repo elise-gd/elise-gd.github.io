@@ -1,54 +1,54 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Wage growth",
-      "anchor": "start",
-      "subtitle": "Yearly, change in salary index, % |Source: Destatis through ECO API",
-      "fontSize": 14,
-      "subtitleFontSize": 12,
-      "color": "#000000",
-      "subtitleColor": "#000000"
-    },
-    "height": 300,
-    "width": 400,
-    "autosize": {
-      "type": "fit",
-      "contains": "padding"
-    },
-    "background": "#ffffff",
-    "view": {
-      "fill": "#ffffff",
-      "strokeOpacity": 0
-    },
-    "data": {
-      "url": "https://api.economicsobservatory.com/fra/wage?vega",
-      "format": {
-        "type": "json"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Wage growth",
+    "anchor": "start",
+    "subtitle": "Yearly, change in salary index, % |Source: Destatis through ECO API",
+    "fontSize": 14,
+    "subtitleFontSize": 12,
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "height": 300,
+  "width": 400,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "#FFAE9D",
+  "view": {
+    "fill": "#FFAE9D",
+    "strokeOpacity": 0
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/fra/wage?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "area",
+    "color": "#B39188",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "",
+        "titleColor": "#122B39",
+        "grid": false
       }
     },
-    "mark": {
-      "type": "area",
-      "color": "#f4134d",
-      "strokeWidth": 2
-    },
-    "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {
-          "title": "",
-          "titleColor": "#122B39",
-          "grid": false
-        }
-      },
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "axis": {
-          "title": "",
-          "titleColor": "#122B39",
-          "grid": false
-        }
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "",
+        "titleColor": "#122B39",
+        "grid": false
       }
     }
   }
+}
