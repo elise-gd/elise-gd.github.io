@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Population between 15 and 64 - Data by BNP Paribas",
+    "fontSize": 18,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/week4%20-%20Feuille%201.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "fold": ["Population UE", "Population US"],
+      "as": ["Région", "Population"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "Date", 
+          "type": "temporal", 
+          "timeUnit": "year", 
+          "title": "Year",
+          "axis": {
+            "values": [2006, 2012, 2018, 2024]
+          }
+        },
+        "y": {
+          "field": "Population", 
+          "type": "quantitative", 
+          "title": "Population",
+          "scale": {
+            "domain": [200, 300]
+          }
+        },
+        "color": {
+          "field": "Région",
+          "type": "nominal",
+          "title": "Legend",
+          "scale": {
+            "domain": ["Population UE", "Population US"],
+            "range": ["black", "orange"]
+          }
+        },
+        "tooltip": [
+          {"field": "Date", "type": "temporal"}, 
+          {"field": "Population", "type": "quantitative"}, 
+          {"field": "Région", "type": "nominal"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeDash": [5, 5], 
+      },
+      "encoding": {
+        "x": {
+          "field": "Date", 
+          "type": "temporal", 
+          "timeUnit": "year"
+        },
+        "y": {
+          "field": "Population US", 
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}
