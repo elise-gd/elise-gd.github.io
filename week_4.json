@@ -34,7 +34,7 @@
         "y": {
           "field": "Population", 
           "type": "quantitative", 
-          "title": "Population",
+          "title": "Population in millions",
           "scale": {
             "domain": [200, 300]
           }
