@@ -38,7 +38,7 @@
       "field": "Population",
       "type": "quantitative",
       "scale": {
-        "range": ["lightblue", "darkblue"] 
+        "range": ["darkblue", "lightblue"]
       },
       "legend": {
         "title": "Population"
@@ -46,3 +46,4 @@
     }
   }
 }
+
