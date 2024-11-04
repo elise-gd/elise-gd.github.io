@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top 15 biggest countries by population (ranks 1 to 15)",
+  "title": {
+    "text": "Top 15 Countries by Population",
+    "fontSize": 18,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/donnees_pays_population.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum['Rang'] >= 1 && datum['Rang'] <= 15"
+    },
+    {
+      "calculate": "toNumber(datum['Population'])",
+      "as": "Population"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Pays",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Country"
+    },
+    "x": {
+      "field": "Population",
+      "type": "quantitative",
+      "title": "Population"
+    },
+    "color": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {
+        "range": ["lightblue", "darkblue"] 
+      },
+      "legend": {
+        "title": "Population"
+      }
+    }
+  }
+}
