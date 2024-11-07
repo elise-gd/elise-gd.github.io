@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "description": "Carte des régions de France avec infobulles.",
+  
+  "title": {
+    "text": "Régions de la France",
+    "anchor": "middle",
+    "color": "black"
+  },
+  
+  "config": {
+    "background": "white",
+    "view": {"stroke": "transparent"}
+  },
+  
+  "width": 170,
+  "height": 200,
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/fr%20(1).json",
+    "format": {"property": "features"}
+  },
+  
+  "projection": {"type": "mercator"},
+  
+  "transform": [
+    {
+      "lookup": "properties.id", 
+      "from": {
+        "data": {
+          "values": [
+            {"id": "FR20R", "name": "Corse"},
+            {"id": "FRARA", "name": "Auvergne Rhône Alpes"},
+            {"id": "FRBFC", "name": "Bourgogne Franche Comté"},
+            {"id": "FRBRE", "name": "Bretagne"},
+            {"id": "FRCVL", "name": "Centre Val de Loire"},
+            {"id": "FRGES", "name": "Grand Est"},
+            {"id": "FRHDF", "name": "Hauts de France"},
+            {"id": "FRIDF", "name": "Île de France"},
+            {"id": "FRNAQ", "name": "Nouvelle Aquitaine"},
+            {"id": "FRNOR", "name": "Normandie"},
+            {"id": "FROCC", "name": "Occitanie"},
+            {"id": "FRPAC", "name": "Provence Alpes Côte d'Azur"},
+            {"id": "FRPDL", "name": "Pays de la Loire"}
+          ]
+        },
+        "key": "id",
+        "fields": ["name"]
+      }
+    }
+  ],
+  
+  "mark": {
+    "type": "geoshape",
+    "fill": "rgb(50, 50, 50)",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+  
+  "encoding": {
+    "tooltip": {"field": "name", "type": "nominal"}
+  }
+}
