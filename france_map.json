@@ -1,10 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-  "description": "Carte des régions de France avec infobulles.",
-  
+
   "title": {
-    "text": "Régions de la France",
+    "text": "France's Region",
     "anchor": "middle",
     "color": "black"
   },
