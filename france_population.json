@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "Distribution of France's population",
+    "anchor": "middle",
+    "color": "black"
+  },
+  
+  "config": {
+    "background": "white",
+    "view": {"stroke": "transparent"}
+  },
+  
+  "width": 400,
+  "height": 450,
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/fr%20(1).json",
+    "format": {"property": "features"}
+  },
+  
+  "projection": {"type": "mercator"},
+  
+  "transform": [
+    {
+      "lookup": "properties.id",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/france_map_population",
+          "format": {"type": "csv"}
+        },
+        "key": "ID",
+        "fields": ["Population"]
+      }
+    }
+  ],
+  
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+  
+  "encoding": {
+    "color": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "range": ["#cce5ff", "#004080"]
+      },
+      "legend": {"title": "Population"}
+    },
+    "tooltip": [
+      {"field": "properties.name", "title": "Region"},
+      {"field": "Population", "title": "Population", "format": ","}
+    ]
+  }
+}
