@@ -60,7 +60,7 @@
     "color": {
       "field": "Happiness score",
       "type": "quantitative",
-      "scale": {"scheme": "oranges"},
+      "scale": {"scheme": "blues"},
       "legend": {"title": "Happiness Score"}
     }
   }
