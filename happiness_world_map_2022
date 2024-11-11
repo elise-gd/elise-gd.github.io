@@ -45,6 +45,10 @@
         "key": "Country",
         "fields": ["Happiness score"]
       }
+    },
+    {
+      "calculate": "datum['Happiness score'] < 2 ? '0-2' : datum['Happiness score'] < 3 ? '2-3' : datum['Happiness score'] < 4 ? '3-4' : datum['Happiness score'] < 5 ? '4-5' : datum['Happiness score'] < 6 ? '5-6' : '6+'",
+      "as": "Happiness_Category"
     }
   ],
   "projection": {
@@ -57,18 +61,18 @@
   },
   "encoding": {
     "color": {
-      "field": "Happiness score",
-      "type": "quantitative",
+      "field": "Happiness_Category",
+      "type": "nominal",
       "title": "Happiness score",
       "scale": {
-        "type": "linear",
-        "domain": [2, 8],
-        "range": ["#ffffcc", "#006400"]
+        "domain": ["0-2", "2-3", "3-4", "4-5", "5-6", "6+"],
+        "range": ["#ffffcc", "#e5f5cc", "#c7e9a0", "#a1d99b", "#74c476", "#006400"]
       }
     },
     "tooltip": [
       {"field": "name", "type": "nominal", "title": "Country"},
-      {"field": "Happiness score", "type": "quantitative", "title": "GDP per capita"}
+      {"field": "Happiness score", "type": "quantitative", "title": "Happiness score"},
+      {"field": "Happiness_Category", "type": "nominal", "title": "Happiness Level"}
     ]
   }
 }
