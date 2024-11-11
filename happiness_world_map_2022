@@ -1,13 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "World Map with happiness levels",
   "title": {
     "text": "World Map",
-    "subtitle": ["Happiness Score per Country", ""],
+    "subtitle": ["Happiness scores", ""],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "middle",
     "color": "black"
   },
+  "view": {"fill": "white"},
   "config": {
     "background": "white",
     "view": {"stroke": "transparent"}
@@ -22,8 +24,9 @@
     }
   },
   "transform": [
+    {"calculate": "parseInt(datum.id)", "as": "id_N"},
     {
-      "lookup": "id",
+      "lookup": "id_N",
       "from": {
         "key": "id",
         "fields": ["name"],
@@ -35,12 +38,12 @@
     {
       "lookup": "name",
       "from": {
-        "key": "Country",
-        "fields": ["Happiness score"],
         "data": {
           "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/happiness_score_2022%20-%20Feuille%201%20(2).csv",
           "format": {"type": "csv"}
-        }
+        },
+        "key": "Country",
+        "fields": ["Happiness score"]
       }
     }
   ],
@@ -49,19 +52,23 @@
   },
   "mark": {
     "type": "geoshape",
-    "stroke": "white",
+    "stroke": "rgb(50, 50, 50)",
     "strokeWidth": 0.1
   },
   "encoding": {
-    "tooltip": [
-      {"field": "name", "type": "nominal", "title": "Country"},
-      {"field": "Happiness score", "type": "quantitative", "title": "Happiness Score"}
-    ],
     "color": {
       "field": "Happiness score",
       "type": "quantitative",
-      "scale": {"scheme": "blues"},
-      "legend": {"title": "Happiness Score"}
-    }
+      "title": "Happiness score",
+      "scale": {
+        "type": "linear",
+        "domain": [2, 8],
+        "range": ["#ffffcc", "#006400"]
+      }
+    },
+    "tooltip": [
+      {"field": "name", "type": "nominal", "title": "Country"},
+      {"field": "Happiness score", "type": "quantitative", "title": "GDP per capita"}
+    ]
   }
 }
