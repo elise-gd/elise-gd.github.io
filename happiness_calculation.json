@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bar chart comparing Russia and Canada across happiness-related categories",
+  "title": "Happiness index calculation",
+  "data": {
+    "values": [
+      {"category": "Residual", "group": "Canada", "value": 1.924},
+      {"category": "GDP per capita", "group": "Canada", "value": 1.886},
+      {"category": "Social support", "group": "Canada", "value": 1.188},
+      {"category": "Healthy life expectancy", "group": "Canada", "value": 0.783},
+      {"category": "Freedom to make life choices", "group": "Canada", "value": 0.659},
+      {"category": "Generosity", "group": "Canada", "value": 0.217},
+      {"category": "Perceptions of corruption", "group": "Canada", "value": 0.368},
+      {"category": "Residual", "group": "Russia", "value": 1.494},
+      {"category": "GDP per capita", "group": "Russia", "value": 1.685},
+      {"category": "Social support", "group": "Russia", "value": 1.095},
+      {"category": "Healthy life expectancy", "group": "Russia", "value": 0.586},
+      {"category": "Freedom to make life choices", "group": "Russia", "value": 0.401},
+      {"category": "Generosity", "group": "Russia", "value": 0.117},
+      {"category": "Perceptions of corruption", "group": "Russia", "value": 0.08}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "category", "type": "nominal", "axis": {"title": "Variables"}},
+    "y": {"field": "value", "type": "quantitative", "axis": {"title": "Levels"}},
+    "xOffset": {"field": "group"},
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Canada", "Russia"],
+        "range": ["#006400", "#66CDAA"]
+      },
+      "legend": {"title": "Country"}
+    }
+  }
+}
