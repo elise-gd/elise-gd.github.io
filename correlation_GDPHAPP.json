@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Correlation between GDP and Happiness for GDP between 0 and 1000 dollars per capita",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/scatter_plot%20-%20Feuille%201.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.GDP >= 0 && datum.GDP <= 1000"}
+  ],
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "GDP", "type": "quantitative"},
+    "y": {"field": "Happiness", "type": "quantitative"}
+  }
+}
