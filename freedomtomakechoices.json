@@ -1,0 +1,13 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Correlation between Happiness level and Freedom to make life choices",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/scatter_plot_data.xlsx%20-%202022.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "Freedom to make life choices", "type": "quantitative"},
+    "y": {"field": "Happiness score", "type": "quantitative"}
+  }
+}
