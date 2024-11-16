@@ -150,22 +150,42 @@ img {
   min-width: 250px; 
 }
 
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
 .button-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 20px; 
 }
 
 .button {
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; 
+  height: 100px; 
   background-color: #ccaea4;
   color: white;
-  border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer; 
   transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #ccaea4;
+  background-color: #ccaea4; 
 }
+
+.button span {
+  font-weight: bold;
+}
+
