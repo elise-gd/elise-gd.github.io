@@ -6,6 +6,8 @@
     "format": {"type": "csv"}
   },
   "mark": "line",
+  "width": 200,
+  "height": 200,
   "encoding": {
     "x": {"field": "Year", "type": "ordinal", "title": "Year"},
     "y": {"field": "value", "type": "quantitative", "title": "Happiness score"},
