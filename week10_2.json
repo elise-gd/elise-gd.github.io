@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title" :"Types of cars sold from 1994 to 2022 in the UK",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/week_10_data2%20-%20Feuille%201.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": ["GPL", "Electric", "GNV", "Plug-in hybride", "Non plug-in hybride"],
+      "as": ["type", "number of cars sold"]
+    }
+  ],
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": "Year"},
+    "y": {"field": "number of cars sold", "type": "quantitative", "title": "Number of Cars Sold"},
+    "color": {"field": "type", "type": "nominal", "title": "Vehicle Type"},
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {"field": "number of cars sold", "type": "quantitative", "title": "Cars Sold"},
+      {"field": "type", "type": "nominal", "title": "Vehicle Type"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Year", "type": "temporal"},
+        "y": {"field": "number of cars sold", "type": "quantitative"},
+        "color": {"field": "type", "type": "nominal"}
+      }
+    },
+    {
+      "params": [{
+        "name": "hover",
+        "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}
+      }],
+      "mark": {"type": "circle", "tooltip": true},
+      "encoding": {
+        "opacity": {
+          "condition": {"test": {"param": "hover", "empty": false}, "value": 1},
+          "value": 0
+        },
+        "size": {
+          "condition": {"test": {"param": "hover", "empty": false}, "value": 100},
+          "value": 48
+        }
+      }
+    }
+  ]
+}
