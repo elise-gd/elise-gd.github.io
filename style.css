@@ -87,6 +87,7 @@ h2 {
 
 .small {
   font-size: 1.25em;
+  text-align : center
 }
 
 /* Paragraph */
@@ -178,4 +179,10 @@ img {
 
 .button span {
   font-weight: bold;
+}
+
+#Location4, #Location5 {
+  width: 100%; 
+  height: 500px; 
+  border-radius: 15px;
 }
