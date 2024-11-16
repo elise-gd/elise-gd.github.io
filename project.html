@@ -3,7 +3,7 @@
 
 <head>    
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>My Portfolio</title>
+    <title>My Portfolio</title> <!-- Le titre affiché dans l'onglet du navigateur -->
 
     <!-- Liens pour Vega, Vega-Lite et Vega-Embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -14,6 +14,8 @@
 <body>
     <div class="top-banner">
         <h1>Project</h1>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
     </div>
     <h3 class="small"> 
         Does money make happiness ?  
@@ -135,6 +137,11 @@
       vegaEmbed(`#${fig.id}`, fig.url, {width: 200, height: 200}).catch(console.error);
     });
   </script>
+
+  <p> 
+    We can see that variables such as Social Support or Freedom to make Life choices have a strong role in the level of the happiness index but variable such as Generosity doesn't play a huge role.
+  </p>
+
 
     <p>
         Data from the World Bank and the World Happiness Record were used to create this work. The entire analysis refers to the year 2022. 
