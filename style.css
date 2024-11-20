@@ -193,6 +193,12 @@ figure {
   height: fit-content; /* Ajuste la hauteur à la taille du contenu */
 }
 
+.figures {
+  display: inline-block; /* Permet de garder les figures côte à côte si nécessaire */
+  margin: 10px auto; /* Ajoute un espace autour et centre les figures */
+  padding: 10px;
+}
+
 #Location4, #Location5 {
   width: 100%; 
   height: 200px; 
