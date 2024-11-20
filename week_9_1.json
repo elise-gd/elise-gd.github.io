@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title" :"Evolution of coffee and tea prices",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/week_9_1%20-%20Feuille%201.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": ["coffee", "tea"],
+      "as": ["type", "price"]
+    }
+  ],
+  "encoding": {
+    "x": {"field": "year", "type": "temporal", "title": "year"},
+    "y": {"field": "price", "type": "quantitative", "title": "Price"},
+    "color": {"field": "type", "type": "nominal", "title": "Type of drink"},
+    "tooltip": [
+      {"field": "year", "type": "temporal", "title": "Year"},
+      {"field": "price", "type": "quantitative", "title": "Cars Sold"},
+      {"field": "type", "type": "nominal", "title": "Vehicle Type"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "year", "type": "temporal"},
+        "y": {"field": "price", "type": "quantitative"},
+        "color": {"field": "type", "type": "nominal"}
+      }
+    },
+    {
+      "params": [{
+        "name": "hover",
+        "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}
+      }],
+      "mark": {"type": "circle", "tooltip": true},
+      "encoding": {
+        "opacity": {
+          "condition": {"test": {"param": "hover", "empty": false}, "value": 1},
+          "value": 0
+        },
+        "size": {
+          "condition": {"test": {"param": "hover", "empty": false}, "value": 100},
+          "value": 48
+        }
+      }
+    }
+  ]
+}
