@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Correlation between Happiness level and Generosity",
+  "title": "Generosity and happiness",
   "data": {
     "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/scatter_plot_data.xlsx%20-%202022.csv",
     "format": {"type": "csv"}
