@@ -189,8 +189,8 @@ figure {
 
 #Location4, #Location5 {
   grid-template-columns: repeat(2, 1fr);
-  width: fit-content 
-  height: fit-content
+  width: fit-content;
+  height: fit-content;
   border-radius: 15px; 
 }
 
