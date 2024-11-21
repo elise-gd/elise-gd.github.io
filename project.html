@@ -139,8 +139,8 @@
   
     figures.forEach(fig => {
     vegaEmbed(`#${fig.id}`, fig.url, {
-      width: 280,
-      height: 280,
+      width: 250,
+      height: 250,
       autosize: { type: 'fit', contains: 'padding' } // Fait remplir le conteneur
     }).catch(console.error);
   });
