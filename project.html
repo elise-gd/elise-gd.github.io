@@ -138,9 +138,14 @@
     ];
   
     figures.forEach(fig => {
-      vegaEmbed(`#${fig.id}`, fig.url, {width: 100, height: 100}).catch(console.error);
-    });
-  </script>
+    vegaEmbed(`#${fig.id}`, fig.url, {
+      width: 280,
+      height: 280,
+      autosize: { type: 'fit', contains: 'padding' } // Fait remplir le conteneur
+    }).catch(console.error);
+  });
+
+</script>
 
   <p> 
     We can see that variables such as Social Support or Freedom to make Life choices have a strong role in the level of the happiness index but variable such as Generosity doesn't play a huge role.
