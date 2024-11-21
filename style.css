@@ -188,9 +188,9 @@ figure {
 }
 
 #Location4, #Location5 {
-  display: inline-block;
-  width: 50%; 
-  height: 200px; 
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content 
+  height: fit-content
   border-radius: 15px; 
 }
 
@@ -204,10 +204,10 @@ figure {
 
 .chart {
   background-color: white; 
-  border: 1px solid #ccc; /* Bordure grise pour mieux délimiter */
-  border-radius: 5px; /* Coins légèrement arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   padding: 10px;
-  width: 300px; /* Taille uniforme pour chaque graphique */
+  width: 300px; 
   height: 300px;
 }
