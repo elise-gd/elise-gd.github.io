@@ -37,7 +37,6 @@ body { /* We can style any HTML element by using its name - here we're styling t
 }
 
 .top-banner {
-  position: fixed; /* Fixe la bande en haut de la page */
   width: 100%;
   list-style-type: none;
   margin: 12;
