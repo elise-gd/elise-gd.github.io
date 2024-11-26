@@ -16,7 +16,6 @@
   text-align: center; /* Centre le texte */
   padding: 30px 0; /* Espace interne vertical */
   position: relative; /* Permet d'ajouter des effets si besoin */
-  left: 0; /* Assure qu'elle commence bien à gauche */
   margin: 0; /* Supprime tout décalage */
   box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
