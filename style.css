@@ -10,14 +10,17 @@
 }
 
 .top-banner {
-  background-color: #b39188;
-  color: rgb(0, 0, 0);
-  width: 100%; /* Utilise 100% pour couvrir toute la largeur */
-  text-align: center;
-  margin: 0; /* Supprime toute marge potentielle */
-  padding: 30px 0; /* Ajuste l'espace interne si nécessaire */
-  box-sizing: border-box; /* Gère correctement le padding */
+  background-color: #b39188; /* Couleur de fond */
+  color: rgb(0, 0, 0); /* Couleur du texte */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  text-align: center; /* Centre le texte */
+  padding: 30px 0; /* Espace interne vertical */
+  position: relative; /* Permet d'ajouter des effets si besoin */
+  left: 0; /* Assure qu'elle commence bien à gauche */
+  margin: 0; /* Supprime tout décalage */
+  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
+
 
 .content {
   margin-top: 100px;
