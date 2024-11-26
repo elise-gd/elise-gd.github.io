@@ -12,7 +12,7 @@
 .top-banner {
   background-color: #b39188; /* Couleur de fond */
   color: rgb(0, 0, 0); /* Couleur du texte */
-  width: 1120px; /* Prend toute la largeur de l'écran */
+  width: 100%; /* Prend toute la largeur de l'écran */
   text-align: center; /* Centre le texte */
   padding: 30px 0; /* Espace interne vertical */
   position: relative; /* Permet d'ajouter des effets si besoin */
