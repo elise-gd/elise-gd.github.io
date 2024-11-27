@@ -9,10 +9,35 @@
   "data": {
     "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/global-gdp-over-the-long-run.csv"
   },
-  "mark": "line",
+  "mark": {
+    "type": "line",
+    "tooltip": true
+  },
   "encoding": {
     "x": {"field": "Year", "type": "temporal", "title": "Year"},
-    "y": {"field": "GDP", "type": "quantitative", "title": "GDP in dollars"}
+    "y": {"field": "GDP", "type": "quantitative", "title": "GDP in dollars"},
+    "size": {
+      "condition": {
+        "param": "hover",
+        "value": 4
+      },
+      "value": 2
+    },
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {"field": "GDP", "type": "quantitative", "title": "GDP in dollars"}
+    ]
   },
+  "params": [
+    {
+      "name": "hover",
+      "select": {
+        "type": "point",
+        "fields": ["Year", "GDP"],
+        "on": "mouseover",
+        "clear": "mouseout"
+      }
+    }
+  ],
   "config": {}
 }
