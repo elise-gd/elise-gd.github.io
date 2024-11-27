@@ -30,7 +30,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Canada", "Russia"],
-        "range": ["#ffaeaf", "#4bef0c"]
+        "range": ["#ffaeaf", "#4b2f0c"]
       },
       "legend": {"title": "Country"}
     }
