@@ -8,6 +8,24 @@
   "mark": "point",
   "encoding": {
     "x": {"field": "Perceptions of corruption", "type": "quantitative"},
-    "y": {"field": "Happiness score", "type": "quantitative"}
-  }
+    "y": {"field": "Happiness score", "type": "quantitative"},
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "Perceptions of corruption", "type": "quantitative", "title": "Corruption Perception"},
+      {"field": "Happiness score", "type": "quantitative", "title": "Happiness Score"}
+    ],
+    "color": {
+      "condition": {
+        "param": "selectPoint",
+        "value": "blue"
+      },
+      "value": "steelblue"
+    }
+  },
+  "params": [
+    {
+      "name": "selectPoint",
+      "select": {"type": "point", "on": "click"}
+    }
+  ]
 }
