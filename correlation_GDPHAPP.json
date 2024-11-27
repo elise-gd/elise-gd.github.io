@@ -10,7 +10,26 @@
   ],
   "mark": "point",
   "encoding": {
-    "x": {"field": "GDP", "type": "quantitative"},
-    "y": {"field": "Happiness", "type": "quantitative"}
-  }
+    "x": {"field": "GDP", "type": "quantitative", "title": "GDP (Dollars per Capita)"},
+    "y": {"field": "Happiness", "type": "quantitative", "title": "Happiness Score"},
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "GDP", "type": "quantitative", "title": "GDP (Dollars per Capita)"},
+      {"field": "Happiness", "type": "quantitative", "title": "Happiness Score"}
+    ],
+    "color": {
+      "condition": {
+        "param": "selectPoint",
+        "value": "blue"
+      },
+      "value": "steelblue"
+    }
+  },
+  "params": [
+    {
+      "name": "selectPoint",
+      "select": {"type": "point", "on": "click"}
+    }
+  ]
 }
+
