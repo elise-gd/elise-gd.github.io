@@ -11,7 +11,14 @@
   "encoding": {
     "x": {"field": "Year", "type": "ordinal", "title": "Year"},
     "y": {"field": "value", "type": "quantitative", "title": "GDP"},
-    "color": {"field": "Country", "type": "nominal"}
+    "color": {
+      "field": "Country", 
+      "type": "nominal",
+      "scale": {
+        "domain": ["Canada", "Russia"],
+        "range": ["#FFFAEF", "#4B2F0C"]
+      }
+    }
   },
   "transform": [
     {"fold": ["Canada", "Russia"], "as": ["Country", "value"]}
