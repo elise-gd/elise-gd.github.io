@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Bar chart comparing Russia and Canada across happiness-related categories",
+  "description": "Bar chart comparing Russia and Canada across happiness-related categories with values on bars",
   "title": "Happiness index calculation",
   "data": {
     "values": [
@@ -20,19 +20,39 @@
       {"category": "Perceptions of corruption", "group": "Russia", "value": 0.08}
     ]
   },
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "category", "type": "nominal", "axis": {"title": "Variables"}},
-    "y": {"field": "value", "type": "quantitative", "axis": {"title": "Levels"}},
-    "xOffset": {"field": "group"},
-    "color": {
-      "field": "group",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Canada", "Russia"],
-        "range": ["#ffaeaf", "#b39188"]
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "category", "type": "nominal", "axis": {"title": "Variables"}},
+        "y": {"field": "value", "type": "quantitative", "axis": {"title": "Levels"}},
+        "xOffset": {"field": "group"},
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Canada", "Russia"],
+            "range": ["#ffaeaf", "#b39188"]
+          },
+          "legend": {"title": "Country"}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -2,
+        "fontSize": 10
       },
-      "legend": {"title": "Country"}
+      "encoding": {
+        "x": {"field": "category", "type": "nominal", "axis": null},
+        "y": {"field": "value", "type": "quantitative"},
+        "xOffset": {"field": "group"},
+        "color": {"field": "group", "type": "nominal", "legend": null},
+        "text": {"field": "value", "type": "quantitative", "format": ".3f"}
+      }
     }
-  }
+  ]
 }
