@@ -66,7 +66,7 @@
       "title": "Happiness score",
       "scale": {
         "domain": ["0-2", "2-3", "3-4", "4-5", "5-6", "6+"],
-        "range": ["#ffffcc", "#e5f5cc", "#c7e9a0", "#a1d99b", "#74c476", "#006400"]
+        "range": ["#ffdfdb", "#fbbfb8", "#f79f95", "#f38071", "#f0604d", "#a3232b"]
       }
     },
     "tooltip": [
