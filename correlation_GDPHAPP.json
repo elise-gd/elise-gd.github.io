@@ -20,7 +20,7 @@
     "color": {
       "condition": {
         "param": "selectPoint",
-        "value": "blue"
+        "value": "green"
       },
       "value": "steelblue"
     }
