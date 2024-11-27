@@ -16,7 +16,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Canada", "Russia"],
-        "range": ["#FFFAEF", "#4B2F0C"]
+        "range": ["#F25278", "#4B2F0C"]
       }
     }
   },
