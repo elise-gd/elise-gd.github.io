@@ -1,11 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Line chart of Happiness for Canada and Russia",
+  "description": "Line chart of Happiness for Canada and Russia with tooltip",
   "data": {
     "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/russia_canada_happy%20-%20Feuille%201.csv",
     "format": {"type": "csv"}
   },
-  "mark": "line",
+  "mark": {
+    "type": "line",
+    "point": true
+  },
   "width": 200,
   "height": 200,
   "encoding": {
@@ -18,9 +21,15 @@
         "domain": ["Canada", "Russia"],
         "range": ["#F25278", "#4B2F0C"]
       }
-    }
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "value", "type": "quantitative", "title": "Happiness Score"}
+    ]
   },
   "transform": [
     {"fold": ["Canada", "Russia"], "as": ["Country", "value"]}
   ]
 }
+
