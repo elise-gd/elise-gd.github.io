@@ -156,6 +156,7 @@ img {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 2px solid #8b5e4a;
 }
 
 .button:hover {
