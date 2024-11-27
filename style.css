@@ -216,4 +216,9 @@ h4 {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
+  padding: 10px 15px; 
+  border: 2px solid #b39188; 
+  border-radius: 8px;
+  background-color: #f9f5f4;
+  display: inline-block; 
 }
