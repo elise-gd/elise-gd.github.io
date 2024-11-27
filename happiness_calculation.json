@@ -51,7 +51,7 @@
         "y": {"field": "value", "type": "quantitative"},
         "xOffset": {"field": "group"},
         "color": {"field": "group", "type": "nominal", "legend": null},
-        "text": {"field": "value", "type": "quantitative", "format": ".3f"}
+        "text": {"field": "value", "type": "quantitative", "format": ".2f"}
       }
     }
   ]
