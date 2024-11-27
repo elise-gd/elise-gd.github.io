@@ -184,6 +184,7 @@ figure {
   display: inline-block; /* Permet de garder les figures côte à côte si nécessaire */
   margin: 10px auto; /* Ajoute un espace autour et centre les figures */
   padding: 10px;
+  justify-content: center;
 }
 
 #Location4, #Location5 {
