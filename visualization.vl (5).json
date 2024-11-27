@@ -11,7 +11,8 @@
   },
   "mark": {
     "type": "line",
-    "tooltip": true
+    "tooltip": true,
+    "color": "#FFAE9D"
   },
   "encoding": {
     "x": {"field": "Year", "type": "temporal", "title": "Year"},
@@ -41,3 +42,4 @@
   ],
   "config": {}
 }
+
