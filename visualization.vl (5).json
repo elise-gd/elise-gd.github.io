@@ -14,22 +14,40 @@
     "tooltip": true,
     "color": "#FFAE9D"
   },
+  "transform": [
+    {
+      "calculate": "datum.GDP / 1000000",
+      "as": "GDP_in_millions"
+    }
+  ],
   "encoding": {
     "x": {"field": "Year", "type": "temporal", "title": "Year"},
     "y": {
-      "field": "GDP",
+      "field": "GDP_in_millions",
       "type": "quantitative",
       "title": "GDP (millions of dollars)",
-      "axis": {
-        "format": "~s"
-      },
-      "scale": {
-        "domain": {"selection": "brush"},
-        "type": "linear"
-      },
-      "transform": [{
-        "title": "scale_transformation",
-        "field": "GDP",
-        "transform": "",
+      "axis": {"format": "~s"}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {
+        "field": "GDP_in_millions",
+        "type": "quantitative",
+        "title": "GDP (millions of dollars)"
       }
+    ]
+  },
+  "params": [
+    {
+      "name": "hover",
+      "select": {
+        "type": "point",
+        "fields": ["Year", "GDP_in_millions"],
+        "on": "mouseover",
+        "clear": "mouseout"
+      }
+    }
+  ],
+  "config": {}
+}
 
