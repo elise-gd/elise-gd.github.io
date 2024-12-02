@@ -16,30 +16,20 @@
   },
   "encoding": {
     "x": {"field": "Year", "type": "temporal", "title": "Year"},
-    "y": {"field": "GDP", "type": "quantitative", "title": "GDP in dollars"},
-    "size": {
-      "condition": {
-        "param": "hover",
-        "value": 4
+    "y": {
+      "field": "GDP",
+      "type": "quantitative",
+      "title": "GDP (millions of dollars)",
+      "axis": {
+        "format": "~s"
       },
-      "value": 2
-    },
-    "tooltip": [
-      {"field": "Year", "type": "temporal", "title": "Year"},
-      {"field": "GDP", "type": "quantitative", "title": "GDP in dollars"}
-    ]
-  },
-  "params": [
-    {
-      "name": "hover",
-      "select": {
-        "type": "point",
-        "fields": ["Year", "GDP"],
-        "on": "mouseover",
-        "clear": "mouseout"
-      }
-    }
-  ],
-  "config": {}
-}
+      "scale": {
+        "domain": {"selection": "brush"},
+        "type": "linear"
+      },
+      "transform": [{
+        "title": "scale_transformation",
+        "field": "GDP",
+        "transform": "",
+    
 
