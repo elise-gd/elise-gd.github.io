@@ -5,27 +5,45 @@
     "url": "https://raw.githubusercontent.com/elise-gd/elise-gd.github.io/refs/heads/main/scatter_plot_data.xlsx%20-%202022.csv",
     "format": {"type": "csv"}
   },
-  "mark": "point",
-  "encoding": {
-    "x": {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"},
-    "y": {"field": "Happiness score", "type": "quantitative", "title": "Happiness Score"},
-    "tooltip": [
-      {"field": "Country", "type": "nominal", "title": "Country"},
-      {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"},
-      {"field": "Happiness score", "type": "quantitative", "title": "Happiness Score"}
-    ],
-    "color": {
-      "condition": {
-        "param": "selectPoint",
-        "value": "#b39188"
-      },
-      "value": "#ffaeaf"
-    }
-  },
-  "params": [
+  "layer": [
     {
-      "name": "selectPoint",
-      "select": {"type": "point", "on": "click"}
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"},
+        "y": {"field": "Happiness score", "type": "quantitative", "title": "Happiness Score"},
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"},
+          {"field": "Happiness score", "type": "quantitative", "title": "Happiness Score"}
+        ],
+        "color": {
+          "condition": {
+            "param": "selectPoint",
+            "value": "#b39188"
+          },
+          "value": "#ffaeaf"
+        }
+      },
+      "params": [
+        {
+          "name": "selectPoint",
+          "select": {"type": "point", "on": "click"}
+        }
+      ]
+    },
+    {
+      "mark": {"type": "line", "color": "#c71585", "strokeDash": [4, 4]},
+      "transform": [
+        {
+          "regression": "Happiness score",
+          "on": "GDP per capita"
+        }
+      ],
+      "encoding": {
+        "x": {"field": "GDP per capita", "type": "quantitative"},
+        "y": {"field": "Happiness score", "type": "quantitative"}
+      }
     }
   ]
 }
+
